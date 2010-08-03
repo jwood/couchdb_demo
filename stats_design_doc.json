@@ -1,0 +1,24 @@
+{
+   "_id": "_design/stats",
+   "views": {
+       "by_lastname": {
+           "map": "function(doc) { emit(doc.last_name, null); }"
+       },
+       "total_employees": {
+           "map": "function(doc) { emit(doc._id, 1); }",
+           "reduce": "function(keys, values, rereduce) { return sum(values); }"
+       },
+       "total_payroll": {
+           "map": "function(doc) { emit(doc._id, doc.salary); }",
+           "reduce": "_sum"
+       },
+       "dependents": {
+           "map": "function(doc) { if (doc.dependents) { for (i in doc.dependents) { emit(doc._id, doc.dependents[i]); } } }",
+           "reduce": "_count"
+       },
+       "by_date_hired": {
+           "map": "function(doc) { year = parseInt(doc.date_hired.substr(0,4)); month = parseInt(doc.date_hired.substr(5,2)); day = parseInt(doc.date_hired.substr(8,2)); emit([year,month,day], doc._id); }"
+       }
+   }
+}
+

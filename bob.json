@@ -1,0 +1,14 @@
+{
+   "_id": "4",
+   "first_name": "Bob",
+   "last_name": "Smith",
+   "salary": 80000,
+   "date_hired": "2010/03/11",
+   "dependents": [
+       {
+           "first_name": "Sally",
+           "last_name": "Smith"
+       }
+   ]
+}
+

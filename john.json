@@ -1,0 +1,22 @@
+{
+   "_id": "1",
+   "first_name": "John",
+   "last_name": "Wood",
+   "date_hired": "2010/01/10",
+   "dependents": [
+       {
+           "first_name": "Beth",
+           "last_name": "Wood"
+       },
+       {
+           "first_name": "Dylan",
+           "last_name": "Wood"
+       },
+       {
+           "first_name": "Chloe",
+           "last_name": "Wood"
+       }
+   ],
+   "salary": 250000
+}
+
