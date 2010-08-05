@@ -69,5 +69,8 @@ First, make a change to the first_doc.json file.  For example, change the last n
     curl 'http://localhost:5984/employees/_design/stats/_view/total_payroll'
 
 #### Which employees started after March 10th, 2010?
-    curl 'http://localhost:5984/employees/_design/stats/_view/by_date_hired?startkey=\[2010,3,10\]'
+    curl 'http://localhost:5984/employees/_design/stats/_view/by_date_hired?startkey=\[2010,3,10\]&include_docs=true'
+
+#### Which employees started in 2010?
+    curl 'http://localhost:5984/employees/_design/stats/_view/by_date_hired?startkey=\[2010,{}\]&include_docs=true'
 

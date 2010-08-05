@@ -17,7 +17,7 @@
            "reduce": "_count"
        },
        "by_date_hired": {
-           "map": "function(doc) { year = parseInt(doc.date_hired.substr(0,4)); month = parseInt(doc.date_hired.substr(5,2)); day = parseInt(doc.date_hired.substr(8,2)); emit([year,month,day], doc._id); }"
+           "map": "function(doc) { year = parseInt(doc.date_hired.substr(0,4)); month = parseInt(doc.date_hired.substr(5,2)); day = parseInt(doc.date_hired.substr(8,2)); emit([year,month,day], null); }"
        }
    }
 }
